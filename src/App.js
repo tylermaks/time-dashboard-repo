@@ -7,7 +7,7 @@ import './Assets/Styles/App.css';
 
 function App() {
 
-  const [timeframe, setTimeframe] = useState("daily")
+  const [timeframe, setTimeframe] = useState("Weekly")
 
   const handleClick = (e) =>{
     setTimeframe(e.target.value)
@@ -17,6 +17,7 @@ function App() {
     <main className="App">
       <Profile 
         onClick={handleClick}
+        timeframe={timeframe}
       />
 
       {
