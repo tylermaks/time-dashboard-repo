@@ -1,0 +1,119 @@
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+body, html {
+  height: 100vh;
+  width: 100%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #0f1424;
+}
+
+h2, h3 {
+  color: #fff;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+h3 {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+span {
+  color: #bdc1ff;
+  display: block;
+  font-weight: 300;
+  margin-top: 1.5rem;
+}
+
+.tracker {
+  background-color: #ff8c66;
+  border-radius: 25px;
+  margin: 1rem auto;
+  overflow: hidden;
+  position: relative;
+  height: 175px;
+  max-width: 500px;
+  width: 90%;
+}
+
+.tracker--profile {
+  background: #1c1f4a;
+}
+
+.tracker--Work {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #ff8c66), to(#1c1f4a));
+  background-image: linear-gradient(#ff8c66 25%, #1c1f4a);
+}
+
+.tracker--Play {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #56c2e6), to(#1c1f4a));
+  background-image: linear-gradient(#56c2e6 25%, #1c1f4a);
+}
+
+.tracker--Study {
+  background-color: #ff5c7c;
+}
+
+.tracker--Exercise {
+  background-color: #4acf81;
+}
+
+.tracker--Social {
+  background-color: #7536d3;
+}
+
+.tracker--SelfCare {
+  background-color: #f1c65b;
+}
+
+.tracker-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #1c1f4a;
+  border-radius: 25px;
+  padding: 1rem;
+  position: absolute;
+  bottom: -1px;
+  height: 80%;
+  width: 100%;
+}
+
+.tracker-inner--profile {
+  background: #5847eb;
+  top: 0;
+}
+
+.icon {
+  position: absolute;
+  top: -10px;
+  right: 1rem;
+}
+
+.history {
+  text-align: right;
+}
+
+.profile-img {
+  border: #fff 3px solid;
+  border-radius: 100%;
+  height: 75px;
+  width: 75px;
+}
+/*# sourceMappingURL=App.css.map */
