@@ -1,10 +1,11 @@
 import React from "react"
 
 import profileImg from "./Assets/images/image-jeremy.png"
+import "./Assets/Styles/Profile/Profile.css"
 
 function Profile(props){
 
-    // const fontValue = props.timeframe === this.value ? 500 : null
+    const links = ["Daily", "Weekly", "Monthly"]
 
     return(
         <div className="tracker tracker--profile">
@@ -16,9 +17,23 @@ function Profile(props){
                 </article>
             </div>
             <div className="link-container">
-                <span onClick={props.onClick} style={{fontWeight: 500}} className="link">Daily</span>
-                <span className="link">Weekly</span>
-                <span className="link">Monthly</span>
+                {
+                    links.map(item => {
+
+                        const styles = props.timeframe === item ? {fontWeight:500, color:"#fff"} : null
+
+                        return(
+                            <span
+                                id={item}
+                                className="link"
+                                onClick={props.handleClick}
+                                style={styles}
+                            >
+                                {item}
+                            </span>
+                        )
+                    })
+                }
             </div>
         </div>
     )

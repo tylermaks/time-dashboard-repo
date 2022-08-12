@@ -3,48 +3,40 @@ import Tracker from "./Tracker";
 import Profile from "./Profile";
 
 import data from "./data.json"
-import './Assets/Styles/App.css';
+import './Assets/Styles/AppStyles/App.css';
 
 function App() {
 
   const [timeframe, setTimeframe] = useState("Weekly")
 
   const handleClick = (e) =>{
-    setTimeframe(e.target.value)
+    setTimeframe(e.target.innerText)
   }
 
   return (
     <main className="App">
-      <Profile 
-        onClick={handleClick}
-        timeframe={timeframe}
-      />
+      <div className="tracker-container">
+        <Profile 
+          handleClick={handleClick}
+          timeframe={timeframe}
+        />
 
-      {
-        data.map((item, index) => {
+        {
+          data.map((item, index) => {
 
-          const getTimeframe = () =>{
-            if(timeframe === "Daily"){
-              return item.timeframes.daily
-            } else if (timeframe === "Weekly"){
-              return item.timeframes.weekly
-            } else {
-              return item.timeframes.monthly
-            }
-          }
-
-          return(
-            <Tracker 
-              key={index}
-              id={index}
-              title={item.title}
-              current={getTimeframe().current}
-              previous={getTimeframe().previous}
-            />
-          )
-        })
-      }
-
+            return(
+              <Tracker 
+                key={index}
+                id={index}
+                title={item.title}
+                current={item["timeframes"][timeframe.toLowerCase()]["current"]}
+                previous={item["timeframes"][timeframe.toLowerCase()]["previous"]}
+                timeframe={timeframe}
+              />
+            )
+          })
+        }
+      </div>
     </main>
   );
 }

@@ -1,0 +1,107 @@
+$blue: hsl(246, 80%, 60%);
+$work: hsl(15, 100%, 70%);
+$play: hsl(195, 74%, 62%);
+$study: hsl(348, 100%, 68%);
+$exercise: hsl(145, 58%, 55%);
+$social: hsl(264, 64%, 52%);
+$selfCare: hsl(43, 84%, 65%);
+$mdBlue: hsl(235, 46%, 20%);
+
+//+++++++++++++++++++++++
+//+++++MOBILE STYLES+++++
+//+++++++++++++++++++++++
+.tracker{ 
+    border-radius: 25px;
+    margin:1rem auto;
+    overflow: hidden;
+
+    position: relative;
+
+    height: 175px;
+    max-width: 400px;
+    width: 90%;
+
+    &--Work{
+        background-image: linear-gradient($work 25%, $mdBlue);
+        grid-area: work;
+    }
+
+    &--Play{
+        background-image: linear-gradient($play 25%, $mdBlue);
+        grid-area: play;
+    }
+
+    &--Study{
+        background-image: linear-gradient($study 25%, $mdBlue);
+        grid-area: study;
+    }
+
+    &--Exercise{
+        background-image: linear-gradient($exercise 25%, $mdBlue);
+        grid-area: exercise;
+    }
+
+    &--Social{ 
+        background-image: linear-gradient($social 25%, $mdBlue);
+        grid-area: social;
+    }
+
+    &--SelfCare{
+        background-image: linear-gradient($selfCare 25%, $mdBlue);
+        grid-area: selfCare;
+    }
+}
+
+.tracker-inner{ 
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 1.25rem 1rem;
+    width: 100%;
+
+    position:absolute;
+    bottom:-1px;
+
+    &--activity{
+        background-color: $mdBlue;
+        height: 75%;
+    }
+}
+
+.tracker-inner--activity:hover{
+    background-color: hsl(235, 46%, 25%);
+}
+
+.tracker-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 50%;
+
+    &--bottom{
+        align-items: flex-end;
+    }
+}
+
+.icon{
+    position: absolute;
+    top: -10px;
+    right: 1rem;
+}
+
+//++++++++++++++++++++++++
+//+++++DESKTOP STYLES+++++
+//++++++++++++++++++++++++
+@media screen and (min-width:1000px) {
+    .tracker{
+        height:100%;
+        width: 100%;
+        margin: 0;
+    }
+
+    .tracker-text--bottom{
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+    }
+}

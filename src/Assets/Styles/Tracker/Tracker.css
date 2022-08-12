@@ -1,0 +1,109 @@
+.tracker {
+  border-radius: 25px;
+  margin: 1rem auto;
+  overflow: hidden;
+  position: relative;
+  height: 175px;
+  max-width: 400px;
+  width: 90%;
+}
+
+.tracker--Work {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #ff8c66), to(#1c1f4a));
+  background-image: linear-gradient(#ff8c66 25%, #1c1f4a);
+  grid-area: work;
+}
+
+.tracker--Play {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #56c2e6), to(#1c1f4a));
+  background-image: linear-gradient(#56c2e6 25%, #1c1f4a);
+  grid-area: play;
+}
+
+.tracker--Study {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #ff5c7c), to(#1c1f4a));
+  background-image: linear-gradient(#ff5c7c 25%, #1c1f4a);
+  grid-area: study;
+}
+
+.tracker--Exercise {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #4acf81), to(#1c1f4a));
+  background-image: linear-gradient(#4acf81 25%, #1c1f4a);
+  grid-area: exercise;
+}
+
+.tracker--Social {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #7536d3), to(#1c1f4a));
+  background-image: linear-gradient(#7536d3 25%, #1c1f4a);
+  grid-area: social;
+}
+
+.tracker--SelfCare {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #f1c65b), to(#1c1f4a));
+  background-image: linear-gradient(#f1c65b 25%, #1c1f4a);
+  grid-area: selfCare;
+}
+
+.tracker-inner {
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 1.25rem 1rem;
+  width: 100%;
+  position: absolute;
+  bottom: -1px;
+}
+
+.tracker-inner--activity {
+  background-color: #1c1f4a;
+  height: 75%;
+}
+
+.tracker-inner--activity:hover {
+  background-color: #22275d;
+}
+
+.tracker-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50%;
+}
+
+.tracker-text--bottom {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.icon {
+  position: absolute;
+  top: -10px;
+  right: 1rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .tracker {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  .tracker-text--bottom {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=Tracker.css.map */

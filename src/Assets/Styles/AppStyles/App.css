@@ -1,0 +1,76 @@
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+body, html, .App {
+  height: 100vh;
+  width: 100%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #0f1424;
+}
+
+h2, h3 {
+  color: #fff;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.75rem;
+}
+
+h3 {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+span {
+  color: #bdc1ff;
+  display: block;
+  font-weight: 300;
+  margin-top: 1.5rem;
+}
+
+.App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tracker-container {
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  h2, .name {
+    font-size: 3rem;
+    line-height: normal;
+  }
+  .tracker-container {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 1.5rem;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "profile work play study" "profile exercise social selfCare";
+    min-height: 450px;
+    height: 60%;
+    max-width: 1200px;
+    width: 70%;
+  }
+}
+/*# sourceMappingURL=App.css.map */
