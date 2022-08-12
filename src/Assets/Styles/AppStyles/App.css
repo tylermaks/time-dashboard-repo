@@ -70,6 +70,7 @@ span {
     min-height: 450px;
     height: 60%;
     max-width: 1200px;
+    min-width: 900px;
     width: 70%;
   }
 }
