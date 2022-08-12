@@ -55,7 +55,7 @@
 
 .tracker-inner--activity {
   background-color: #1c1f4a;
-  height: 85%;
+  height: 75%;
 }
 
 .tracker-inner--activity:hover {
@@ -92,6 +92,9 @@
     height: 100%;
     width: 100%;
     margin: 0;
+  }
+  .tracker-inner--activity {
+    height: 85%;
   }
   .tracker-text--bottom {
     -webkit-box-align: start;

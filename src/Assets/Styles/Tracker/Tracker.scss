@@ -63,7 +63,7 @@ $mdBlue: hsl(235, 46%, 20%);
 
     &--activity{
         background-color: $mdBlue;
-        height: 85%;
+        height: 75%;
     }
 }
 
@@ -97,6 +97,10 @@ $mdBlue: hsl(235, 46%, 20%);
         height:100%;
         width: 100%;
         margin: 0;
+    }
+
+    .tracker-inner--activity{
+        height: 85%;
     }
 
     .tracker-text--bottom{
