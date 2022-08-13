@@ -13,15 +13,7 @@ function Tracker(props) {
 
     const images = [work, play, study, exercise, social, selfCare]
 
-    const convertTimeframe = () => {
-        if(props.timeframe === "Daily"){
-            return "Yesterday"
-        } else if (props.timeframe === "Weekly"){
-            return "Last week"
-        } else if (props.timeframe === "Monthly"){
-            return "Last month"
-        }
-    }
+    const convertTimeframe = props.timeframe === 'Daily' ? 'Yesterday' : props.timeframe === 'Weekly' ? 'Last week' : 'Last month';
         
     return(
         <div className={"tracker tracker--" + props.title.replace(/\s+/g, '')} >
@@ -33,7 +25,7 @@ function Tracker(props) {
                 </div>
                 <div className="tracker-text tracker-text--bottom">
                     <h2>{props.current}hrs</h2>
-                    <span className="previous">{convertTimeframe()} - {props.previous} Hours</span>
+                    <span className="previous">{convertTimeframe} - {props.previous} Hours</span>
                 </div>
             </div>
         </div>
